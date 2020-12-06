@@ -1,0 +1,44 @@
+<div class="home">
+    <div class="myForm">
+        <h1 class="title-form">My Clients</h1>
+        <form [formGroup]="formRegister">
+            <div class="label">
+                <input type="text" placeholder="name" formControlName="name" #name required>
+                <mat-icon style="margin-left: 15px;">person</mat-icon>
+            </div>
+            <div class="label">
+                <input type="email" placeholder="email@..." formControlName="email">
+                <mat-icon style="margin-left: 15px;">email</mat-icon>
+            </div>
+            <div class="label">
+                <select placeholder="favorite food"  formControlName="food">
+                    <option *ngFor="let f of foods" [value]="f">
+                        {{ f }}
+                    </option>
+                </select>
+                <mat-icon style="margin-left: 15px;">fastfood</mat-icon>
+            </div>
+            <div class="btn-register">
+                <button class="btn-ok" (click)="onSubmit()" [disabled]="!formRegister.valid">
+                    Register
+                </button>
+                <button class="btn-cancel" (click)="cancel()" [disabled]="!formRegister.valid">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <section>
+        <div class="list-clients" *ngIf="people$ | async; let people">
+            <h1 class="title-listClient">My clients</h1>
+            <ul class="item-client">
+                <li *ngFor="let p of people">
+                    {{p.name}} - {{ p.email }} - {{ p.food }}
+                    <button class="btn btn-update" (click)="deleteClient(p)"><mat-icon style="color: orangered;">delete</mat-icon></button>
+                    <button class="btn btn-update" (click)="edit(p)"><mat-icon style="color: purple;">edit</mat-icon></button>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,119 @@
+.home {
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+}
+
+.myForm {
+    width: 400px;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    margin: 50px auto;
+    box-shadow: 8px 8px 8px rgb(214, 209, 209);
+    box-sizing: border-box;
+}
+
+.title-form {
+    font-weight: bold;
+    font-family: calibri;
+    font-size: 30px;
+    text-align: center;
+}
+
+.label {
+    width: 100%;
+}
+
+form {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+}
+
+.btn-register {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+/* DIV listagem de clients */
+
+.list-clients {
+    min-width: 400px;
+    max-width: 550px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 8px 8px silver;
+    padding: 15px;
+    margin: 50px auto 50px auto;
+}
+
+.list-clients > .title-listClient {
+    font-size: 30px;
+    font-family: calibri;
+    font-weight: bold;
+    text-align: center;
+}
+
+.item-client {
+    width: 100%;
+    display: flex;
+    flex-direction: column  ;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/*Classes padrão */
+
+input {
+    width: 70%;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid rgb(16, 38, 161);
+    margin-top: 25px;
+}
+
+select {
+    width: 70%;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid rgb(16, 38, 161);
+    margin-top: 25px;
+}
+
+.btn {
+    width: auto;
+    height: 40px;
+    border: none;
+}
+
+.btn-update {
+    margin-left: 15px;
+}
+
+.btn-ok {
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    color: darkgreen;
+    background-color: rgb(211, 198, 198);
+}
+
+.btn-cancel {
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    color: rgb(161, 41, 67);
+    background-color: rgb(211, 198, 198);
+}
+
+
+
+
